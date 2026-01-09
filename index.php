@@ -14,9 +14,9 @@
   </head>
   <body>
     <!-- 로딩 -->
-    <div class="loadingCon">
+    <!-- <div class="loadingCon">
     <div class="loading"></div>
-  </div>
+  </div> -->
     <!-- 헤더 -->
     <?php include './header.php'; ?>
     <!-- 슬라이드 -->
