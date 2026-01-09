@@ -1,0 +1,35 @@
+/* 장바구니 */
+
+.main-cart{
+  width: fit-content;
+  display: flex;
+  align-self: center;
+  box-shadow: 0 0 5px black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.drop-items{
+  display: flex;
+  gap: 30px;
+}
+.dropCart{
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+}
+
+.calcCart{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  &>button{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 40px;
+  }
+}

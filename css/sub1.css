@@ -1,0 +1,82 @@
+/* 소개 */
+
+.introduce{
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 5px black;
+  width: 1500px;
+  align-self: center;
+}
+
+.img-cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-content{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-between;
+}
+.intro-con{
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+/* 모토 */
+
+.gallery{
+  align-self: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  gap: 10px;
+}
+.gallery>div{
+  position: relative;
+  width: 300px;
+  height: 1000px;
+  transition: .3s;
+  background-size: cover;
+}
+.gallery>div:nth-child(1) {
+  background-image: url(../images/motto01.png);
+  background-position: 0px;
+}
+.gallery>div:nth-child(2) {
+  background-image: url(../images/motto02.png);
+  background-position: -300px;
+}
+.gallery>div:nth-child(3) {
+  background-image: url(../images/motto03.png);
+  background-position: -600px;
+}
+.gallery>div:nth-child(4) {
+  background-image: url(../images/motto04.png);
+  background-position: -900px;
+}
+.gallery>div:nth-child(5) {
+  background-image: url(../images/motto05.png);
+  background-position: -1200px;
+}
+[class*="mtitle"] {
+  position: absolute;
+  left: 30px;bottom: 30px;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+
+.desBox>div{
+  position: absolute;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  justify-self: center;
+  width: 210px;
+  text-align: center;
+  opacity: 0;
+}
