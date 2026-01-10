@@ -35,12 +35,23 @@
             <li><a href="#">-</a></li>
           </ul>
         </ul>
+         <?php if($_SESSION['user']['id'] === 'admin') {?>
+              <ul>
+                <a href="./admin.php">관리자</a>
+                <ul class="drop">
+                  <li><a href="#">공지사항관리</a></li>
+                </ul>
+              </ul>
+          <?php } ?>
       </div>
       <div class="hdabox">
         <a href="#">장바구니</a>
         <a href="#">관리자</a>
         <a href="#" class="sin">로그인</a>
         <a href="#" class="sup">회원가입</a>
+        <?php if(isset($_SESSION['user'])) { ?>
+            <a href="./logout.php">로그아웃</a>
+          <?php } ?>
       </div>
     </header>
      <div class="upPop">
