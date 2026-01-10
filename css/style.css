@@ -1,18 +1,20 @@
 /* 로딩 */
 
-.loadingCon{
+.loadingCon {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  top: 0;left: 0;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.438);
   z-index: 999;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   animation: loadingCon 4s ease forwards;
 }
 
-.loading{
+.loading {
   border-radius: 50%;
   z-index: 999;
   width: 100px;
@@ -23,20 +25,20 @@
 }
 
 @keyframes loadingCon {
-  80%{
+  80% {
     opacity: 0.6;
   }
-  100%{
+  100% {
     opacity: 0;
     visibility: hidden;
     z-index: -1;
   }
 }
 @keyframes loading {
-  80%{
+  80% {
     opacity: 0.6;
   }
-  100%{
+  100% {
     opacity: 0;
     visibility: hidden;
     z-index: -1;
@@ -46,17 +48,20 @@
 
 /* 슬라이드 */
 
-.slider{
+.slider {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 800px;
   overflow: hidden;
 }
-.slider:hover .slide{
+.slider:hover .slide {
   animation-play-state: paused;
 }
 
-.slide{
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -64,77 +69,82 @@
   background-size: cover;
   animation: slider 9s infinite linear;
 }
-.slide::before{
+.slide::before {
   content: "";
   position: absolute;
-  top: 0;left: 0;width: 100%;height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.274);
 }
-.slide h1{
+.slide h1 {
   position: absolute;
   font-size: 80px;
   color: white;
-  left: 100px;bottom: 200px;
+  left: 100px;
+  bottom: 200px;
   padding: 10px;
 }
-.slide p{
+.slide p {
   font-size: 32px;
   position: absolute;
   color: white;
-  left: 100px;bottom: 100px;
+  left: 100px;
+  bottom: 100px;
   padding: 10px;
   font-weight: 500;
 }
 
-.slide span{
+.slide span {
   color: #ffd400;
 }
 
-
-.slide:nth-child(1){
+.slide:nth-child(1) {
   background-image: url(../images/slide1.jpg);
   animation-delay: 0s;
 }
-.slide:nth-child(2){
+.slide:nth-child(2) {
   background-image: url(../images/slide2.jpg);
   animation-delay: -3s;
 }
-.slide:nth-child(3){
+.slide:nth-child(3) {
   background-image: url(../images/slide3.jpg);
   animation-delay: -6s;
 }
 
 @keyframes slider {
-  0%{
+  0% {
     transform: translateX(0%);
   }
-  26%{
+  26% {
     transform: translateX(0%);
   }
-  33%{
+  33% {
     transform: translateX(-100%);
     animation-timing-function: step-end;
   }
-  93%{
+  93% {
     transform: translateX(100%);
   }
-  100%{
+  100% {
     transform: translateX(0%);
   }
 }
 
 /* 공지사항 */
 
-table{
+table {
   align-self: center;
   border-collapse: collapse;
   border-radius: 20px;
 }
-th{
+th {
   background-color: #ffd400;
 }
 
-th, td{
+th,
+td {
   border-bottom: 1px solid #ccc;
   padding: 10px 20px;
   text-align: center;
@@ -149,35 +159,38 @@ tr th:nth-child(3) {
   width: 200px;
 }
 
-
 /* 상품입점/제휴문의 */
 
-.koreano1{
-  width: 1000px;
+.koreano1 {
+  max-width: 1000px;
+  width: 100%;
   height: 500px;
   border-radius: 10px;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-weight: bold;
   color: rgb(0, 0, 0);
   font-size: 40px;
   align-self: center;
 }
-.up{
+.up {
   background-color: hsl(51, 100%, 81%);
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
   user-select: none;
 }
-.up:hover{
+.up:hover {
   background-color: #ffd400;
   transform: translateY(-20px);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.322);
 }
 
-.banner{
+.banner {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -192,13 +205,13 @@ tr th:nth-child(3) {
   border-radius: 50%;
 }
 
-.info{
+.info {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.info-con{
+.infocon {
   border-radius: 50%;
   width: 300px;
   height: 300px;
@@ -206,20 +219,20 @@ tr th:nth-child(3) {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   font-weight: bold;
 }
-.info-1{
-  display: flex;justify-content: center;
+[class*="info-"] {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
   gap: 100px;
 }
-.info-2{
-  display: flex;justify-content: center;gap: calc(500px /3);
+.info-2 {
+  display: flex;
+  justify-content: center;
+  gap: calc(500px / 3);
   align-items: center;
 }
-.info-3{
-  display: flex;justify-content: center;
-  gap: 100px;
-}
-

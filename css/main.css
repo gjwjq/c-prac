@@ -7,29 +7,31 @@
   box-sizing: border-box;
   color: inherit;
 }
-body{
-  overflow-x: hidden;
-}
+
+
 
 /* 헤더 */
 
 header {
+  padding: 0 calc((100% - 1400px) / 2);
+  flex-wrap: wrap;
   z-index: 10;
   position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100px;
+  width: 100%;
+  min-height: 100px;
   box-shadow: 3px 0 3px black;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
 }
 
 .dropdown {
   display: flex;
   position: relative;
+  background-color: white;
 }
 
 .dropdown a {
@@ -37,22 +39,16 @@ header {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  width: 100px;
+  min-width: 90px;
   height: 50px;
   position: relative;
   &:hover::after {
     width: 100%;
   }
 }
-.dropdown ul {background-color: white;}
-.dropdown>ul{
-  transition: .3s;
-}
-.dropdown>ul:hover{
-  background-color: #ffe695;
-}
-.dropdown>ul:hover>.drop{
-  background-color: #ffe695;
+
+.dropdown>ul:hover>a::after{
+  width: 100%;
 }
 
 .dropdown a::after{
@@ -67,6 +63,7 @@ header {
   font-size: 18px;
 }
 .drop {
+  background-color: white;
   height: 0;
   position: absolute;
   overflow: hidden;
@@ -82,12 +79,14 @@ header {
 
 .hdabox {
   display: flex;
+    background-color: white;
+
   & > a {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    width: 100px;
+    width: 90px;
     height: 50px;
     font-weight: bold;
     color: #818181;
@@ -100,9 +99,13 @@ header {
 
 /* 메인 */
 
+
 main{
-  width: 100vw;
-  padding: 50px 100px;
+  padding-top: 100px;
+  justify-self: center;
+  max-width: 1400px;
+  width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -110,13 +113,20 @@ main{
 }
 
 .main-title{
-  border-left: 20px solid #ffc400;
+  cursor: pointer;
+  border-left: 10px solid #ffc400;
   padding: 0 5px;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
 }
 
 /* 상품 */
+.main-product{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
 .mp-wrap{
   display: flex;
   flex-direction: column;
@@ -124,8 +134,8 @@ main{
   gap: 30px;
 }
 .product{
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 3px black;
@@ -133,7 +143,7 @@ main{
 
 .pro-img{
   width: 100%;
-  height: 200px;
+  height: 150px;
   overflow: hidden;
 }
 
@@ -171,11 +181,7 @@ main{
   font-weight: bold;
 }
 
-.main-product{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
+
 
 .mp-title{
   text-align: center;
@@ -240,43 +246,44 @@ main{
 
 footer{
   padding: 30px;
-  width: 100vw;
-  min-height: 300px;
+  justify-self: center;
+  max-width: 1400px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
   display: flex;
-  box-shadow: 0 0 10px black;
-  background-color: white;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
-  background-color: #ffe695;
+  margin-bottom: 50px;
+  box-shadow: 0 0 50px #ccc;
+  font-weight: bold;
+  text-align: justify;
+}
+footer a:first-child{
+  min-width: 100px;min-height: 100px;
 }
 footer img{
   filter: grayscale(1);
 }
-.ft-wrap{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.ft-wrap > div {
+
+footer > div {
   display: flex;
   gap: 30px;
 }
 
-.ft-top{
-  align-items: center;
-  justify-content: space-between;
-}
-.ft-bottom{
-  align-items: center;
-  justify-content: space-between;
+[class*='ft-'] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .ft-4{
   display: flex;
   gap: 10px;
   padding: 10px;
-  border: 1px solid black;
-  border-style: dashed;
+  flex-wrap: wrap;
+  width: fit-content;
   user-select: none;
   &>p:hover{
     transition: .3s;
@@ -284,15 +291,26 @@ footer img{
     font-weight: bold;
   }
 }
-
+.ft-5{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .ft-fa{
   display: flex;
   gap: 30px;
   padding: 10px;
-  box-shadow: 0 0 5px black;
-  border-radius: 10px;
   cursor: pointer;
+  width: fit-content;
 }
+
+footer .fa{
+  display: flex;justify-content: center;align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.616);
+  width: 50px;height: 50px;
+}
+
 footer .fa:nth-child(1):hover{
   color: red;
 }
@@ -316,7 +334,7 @@ footer .fa:nth-child(5):hover{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.486);
   display: flex;
@@ -344,7 +362,7 @@ footer .fa:nth-child(5):hover{
   z-index: 9998;
   position: fixed;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   justify-self: center;
   align-self: center;
@@ -372,4 +390,60 @@ footer .fa:nth-child(5):hover{
 
 .signClose {
   background-color: rgb(255, 88, 88);
+}
+
+@media (max-width: 480px) {
+  header{
+    flex-direction: column;gap: 10px;
+    padding: 0;
+  }
+  .slider{
+    height: 600px;
+  }
+  .slide h1{
+    font-size: 50px;
+  }
+  .slide p{
+    font-size: 20px;
+  }
+  .main-product{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  table{
+    width: 400px;
+  }
+  .product{
+    width: 180px;
+    height: 280px;
+  }
+  .banner{
+    display: flex;justify-content: center;
+  }
+  main{
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .koreano1{
+    width: 400px;
+    font-size: 1rem;
+  }
+  footer{
+    flex-direction: column;
+  }
+  [class*='info-']{
+    width: 100vw;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .info-3{
+    margin-bottom: 20px;
+  }
+  .infocon{
+    width: 200px;height: 200px;font-size: 12px;
+  }
+  .infofa{
+    display: none !important;
+  }
 }

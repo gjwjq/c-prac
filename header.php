@@ -35,11 +35,12 @@
             <li><a href="#">-</a></li>
           </ul>
         </ul>
-         <?php if($_SESSION['user']['id'] === 'admin') {?>
+         <?php if(isset($_SESSION['user']) && $_SESSION['user']['id'] === 'admin') {?>
               <ul>
                 <a href="./admin.php">관리자</a>
                 <ul class="drop">
                   <li><a href="#">공지사항관리</a></li>
+                  <li><a href="#">판매상품관리</a></li>
                 </ul>
               </ul>
           <?php } ?>
