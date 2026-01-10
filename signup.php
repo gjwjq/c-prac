@@ -8,6 +8,12 @@
   $name = $_POST['name'];
   $email = $_POST['email'];
 
+  $check = DB::fetch("SELECT * FROM user WHERE id = '$id'");
+  if($check) {
+    back('아이디가 이미 존재해요');
+    exit;
+  }
+
   $salt = uniqid();
   $enc_pw = hash('sha256', $pw . $salt);
 

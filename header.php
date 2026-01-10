@@ -1,6 +1,10 @@
 <?php 
-  include_once "./db.php";
-  session_start();
+  require_once "./db.php";
+  require_once "./lib.php";
+  if(!isset($_SESSION)) {
+    session_start();
+  }
+
 ?>
 <header>
       <a href="./index.php"
@@ -47,7 +51,6 @@
       </div>
       <div class="hdabox">
         <a href="#">장바구니</a>
-        <a href="#">관리자</a>
         <a href="#" class="sin">로그인</a>
         <a href="#" class="sup">회원가입</a>
         <?php if(isset($_SESSION['user'])) { ?>
