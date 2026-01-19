@@ -1,4 +1,4 @@
-//축약 변수
+{//축약 변수
 const $ = e => document.querySelector(e)
 const $$ = e => [...document.querySelectorAll(e)]
 
@@ -201,3 +201,4 @@ category.forEach(e => {
 
 dragAndDrop()
 cart()
+}

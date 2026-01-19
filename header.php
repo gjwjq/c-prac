@@ -19,9 +19,9 @@
           </ul>
         </ul>
         <ul>
-          <a href="./sub2.php">전체상품</a>
+          <a href="./newsub2.php">전체상품</a>
           <ul class="drop">
-            <li><a href="./sub2.php">판매상품</a></li>
+            <li><a href="./newsub2.php">판매상품</a></li>
             <li><a href="./sub3.php">인기상품</a></li>
           </ul>
         </ul>
