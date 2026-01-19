@@ -224,9 +224,9 @@ main{
   margin-top: 10px;
   justify-content: space-around;
 }
-.btn-wrap button{
-  padding: 10px 0px;
-  width: 100px;
+.btn-wrap button, .btn-wrap a{
+  min-width: 100px;
+  min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,6 +237,11 @@ main{
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  font-size: 12px;
+  transition: .3s;
+  &:hover{
+    font-size: 14px;
+  }
 }
 .pro-wrap{
   display: flex;

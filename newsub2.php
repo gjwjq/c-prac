@@ -39,6 +39,9 @@
       </div>
       </div>
     </main>
+
+
+
     <main>
       <div class="main-title">ALL PRODUCT</div>
 <div class="main-product">
@@ -67,7 +70,7 @@
                         <div class="pro-name"><?= $item['title'] ?></div>
                         <div class="pro-price">가격: <?= $price_fmt ?>원</div>
                         <div class="btn-wrap">
-                            <button class="cart-btn">장바구니담기</button>
+                            <a href="addcart.php?idx=<?= $item['idx'] ?>" class="get">장바구니 담기</a>
                             <button class="buy-btn">구매하기</button>
                         </div>
                     </div>
@@ -80,7 +83,13 @@
     } 
     ?>
 </div>
-   </main>
+</main>
+
+
+
+
+
+
    <main>
       <div class="orderBtn">비회원주문</div>
 
