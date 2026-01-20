@@ -41,8 +41,9 @@
           $items = DB::fetchAll("select i.*, c.count from item i join cart c on i.idx = itemId and c.userId = '$userId'");
 
           foreach ($items as $key => $value) {
+            $realPrice = ($value['dis'] > 0) ? $value['dis'] : $value['price'];
           ?>
-          <div class="product">
+          <div class="product" data-price="<?= $realPrice ?>">
             <div class="pro-img">
               <img src="<?= $value['img'] ?>" alt="<?= $value['idx'] ?>" title="<?= $value['idx'] ?>">
             </div>
@@ -54,15 +55,18 @@
               <?php } else { ?>
               <div class="pro-price">가격 : <?= number_format($value['price']) ?>원</div>
               <?php } ?>
+              <div class="count" style="font-size: 14px;">
+                <div>수량 : <input type="number" value="<?= $value['count'] ?>" min="1" oninput="calc()" ></div>
+                <div>총 : <span class="sub-total"><?= $realPrice * $value['count'] ?></span>원</div>
+              </div>
             </div>
+
           </div>
-
-
           <?php } ?>
         </div>
       </div>
       <div class="calcCart">
-        <h1>전체 결제금액 : <span class="disPrice"></span>원</h1>
+        <h1>전체 결제금액 : <span class="disPrice">0</span>원</h1>
         <button style="cursor: pointer;">구매하기</button>
       </div>
     </div>
@@ -71,5 +75,22 @@
   <?php require_once "footer.php" ?>
 
 </body>
+<script>
+  function calc() {
+    let total = 0
+    const products = $$('.product')
+    products.forEach(e => {
+      const price = parseInt(e.getAttribute('data-price'))
+      const input = e.querySelector('input')
+      let inputPrice = parseInt(input.value)
+      
+      const subTotal = price * inputPrice
 
+      e.querySelector('.sub-total').textContent = subTotal.toLocaleString()
+      total += subTotal
+    })
+    $('.disPrice').textContent = total.toLocaleString()
+  }
+  calc()
+</script>
 </html>
