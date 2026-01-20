@@ -35,7 +35,7 @@
                             <span class="disPrice" style="color: red; font-weight: bold;"><?= $dis_price ?></span>
                         </div>
                         <div class="btn-wrap">
-                            <button>장바구니담기</button>
+                            <a href="addcart.php?idx=<?= $item['idx'] ?>" class="get">장바구니 담기</a>
                             <button>구매하기</button>
                         </div>
                     </div>

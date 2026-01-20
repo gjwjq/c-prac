@@ -8,8 +8,6 @@
   color: inherit;
 }
 
-
-
 /* 헤더 */
 
 header {
@@ -47,18 +45,23 @@ header {
   }
 }
 
-.dropdown>ul:hover>a::after{
+.dropdown > ul:hover > a::after {
   width: 100%;
 }
 
-.dropdown a::after{
+.dropdown a::after {
   content: "";
   position: absolute;
-  bottom: 0;left: 50%;transform: translateX(-50%);
-  width: 0;height: 3px;transition: .3s;background-color: #ffc400;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  transition: 0.3s;
+  background-color: #ffc400;
 }
 
-.dropdown>ul>a{
+.dropdown > ul > a {
   font-weight: 500;
   font-size: 18px;
 }
@@ -69,7 +72,7 @@ header {
   overflow: hidden;
   transition: 0.3s;
 }
-.drop a{
+.drop a {
   font-size: 14px;
 }
 
@@ -79,7 +82,7 @@ header {
 
 .hdabox {
   display: flex;
-    background-color: white;
+  background-color: white;
 
   & > a {
     display: flex;
@@ -99,8 +102,7 @@ header {
 
 /* 메인 */
 
-
-main{
+main {
   padding-top: 100px;
   justify-self: center;
   max-width: 1400px;
@@ -112,7 +114,7 @@ main{
   margin-bottom: 100px;
 }
 
-.main-title{
+.main-title {
   cursor: pointer;
   border-left: 10px solid #ffc400;
   padding: 0 5px;
@@ -121,19 +123,19 @@ main{
 }
 
 /* 상품 */
-.main-product{
+.main-product {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
-.mp-wrap{
+.mp-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
-.product{
+.product {
   width: 250px;
   min-height: 300px;
   border-radius: 10px;
@@ -141,30 +143,30 @@ main{
   box-shadow: 0 0 3px black;
 }
 
-.pro-img{
+.pro-img {
   width: 100%;
   height: 150px;
   overflow: hidden;
 }
 
-.pro-img img{
+.pro-img img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   cursor: pointer;
-  transition: .3s;
-  /* &:hover{
-    transform: scale(1.2);
-  } */
+  transition: 0.3s;
+}
+.pro-img:hover .big {
+  transform: scale(1.1);
 }
 
-.pro-content{
+.pro-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
 }
-.pro-name{
+.pro-name {
   font-weight: bold;
   font-size: 20px;
   white-space: nowrap;
@@ -172,18 +174,16 @@ main{
   overflow: hidden;
 }
 
-.pro-des{
+.pro-des {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.pro-realPrice{
+.pro-realPrice {
   font-weight: bold;
 }
 
-
-
-.mp-title{
+.mp-title {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -192,21 +192,21 @@ main{
   position: relative;
   cursor: pointer;
 
-  &:hover::after{
+  &:hover::after {
     width: 120%;
   }
 }
-.mp-title::after{
+.mp-title::after {
   content: "";
   height: 3px;
   width: 0;
   position: absolute;
-  bottom: 0;left: 50%;transform: translateX(-50%);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #ffc400;
-  transition: .3s;
+  transition: 0.3s;
 }
-
-
 
 .nowPrice {
   color: rgb(124, 124, 124);
@@ -214,42 +214,63 @@ main{
   text-decoration: line-through;
 }
 
-.disPrice{
+.disPrice {
   color: red;
   font-weight: bold;
 }
 
-.btn-wrap{
+.btn-wrap {
   display: flex;
+  justify-content: space-between;
   margin-top: 10px;
-  justify-content: space-around;
 }
-.btn-wrap button, .btn-wrap a{
-  min-width: 100px;
+.btn-wrap a {
+  width: 48%;
   min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffc400;
-  box-shadow: 0 0 3px #000000;
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   user-select: none;
   font-size: 12px;
-  transition: .3s;
-  &:hover{
-    font-size: 14px;
+  background-color: #ffc400;
+  color: white;
+  transition: 0.3s;
+  font-size: 14px;
+  &:hover {
+    background-color: white;
+    border: 2px solid #ffc400;
+    color: #ffc400;
   }
 }
-.pro-wrap{
+.btn-wrap button {
+  width: 48%;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #ffc400;
+  color: #ffc400;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  transition: 0.3s;
+  font-size: 14px;
+  &:hover{
+background-color: #ffc400;
+  color: white;
+  }
+}
+.pro-wrap {
   display: flex;
   justify-content: space-between;
 }
 /* 푸터 */
 
-footer{
+footer {
   padding: 30px;
   justify-self: center;
   max-width: 1400px;
@@ -265,43 +286,43 @@ footer{
   font-weight: bold;
   text-align: justify;
 }
-footer a:first-child{
-  min-width: 100px;min-height: 100px;
+footer a:first-child {
+  min-width: 100px;
+  min-height: 100px;
 }
-footer img{
+footer img {
   filter: grayscale(1);
 }
-
 
 footer > div {
   display: flex;
   gap: 30px;
 }
 
-[class*='ft-'] {
+[class*="ft-"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.ft-4{
+.ft-4 {
   display: flex;
   gap: 10px;
   padding: 10px;
   flex-wrap: wrap;
   width: fit-content;
   user-select: none;
-  &>p:hover{
-    transition: .3s;
+  & > p:hover {
+    transition: 0.3s;
     cursor: pointer;
     font-weight: bold;
   }
 }
-.ft-5{
+.ft-5 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.ft-fa{
+.ft-fa {
   display: flex;
   gap: 30px;
   padding: 10px;
@@ -309,26 +330,29 @@ footer > div {
   width: fit-content;
 }
 
-footer .fa{
-  display: flex;justify-content: center;align-items: center;
+footer .fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.616);
-  width: 50px;height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
-footer .fa:nth-child(1):hover{
+footer .fa:nth-child(1):hover {
   color: red;
 }
-footer .fa:nth-child(2):hover{
+footer .fa:nth-child(2):hover {
   color: rgb(230, 0, 230);
 }
-footer .fa:nth-child(3):hover{
+footer .fa:nth-child(3):hover {
   color: rgb(172, 0, 172);
 }
-footer .fa:nth-child(4):hover{
+footer .fa:nth-child(4):hover {
   color: rgb(0, 195, 255);
 }
-footer .fa:nth-child(5):hover{
+footer .fa:nth-child(5):hover {
   color: blue;
 }
 
@@ -398,57 +422,61 @@ footer .fa:nth-child(5):hover{
 }
 
 @media (max-width: 480px) {
-  header{
-    flex-direction: column;gap: 10px;
+  header {
+    flex-direction: column;
+    gap: 10px;
     padding: 0;
   }
-  .slider{
+  .slider {
     height: 600px;
   }
-  .slide h1{
+  .slide h1 {
     font-size: 50px;
   }
-  .slide p{
+  .slide p {
     font-size: 20px;
   }
-  .main-product{
+  .main-product {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }
-  table{
+  table {
     width: 400px;
   }
-  .product{
+  .product {
     width: 180px;
     height: 280px;
   }
-  .banner{
-    display: flex;justify-content: center;
+  .banner {
+    display: flex;
+    justify-content: center;
   }
-  main{
+  main {
     align-items: center;
     margin-bottom: 0;
   }
-  .koreano1{
+  .koreano1 {
     width: 400px;
     font-size: 1rem;
   }
-  footer{
+  footer {
     flex-direction: column;
   }
-  [class*='info-']{
+  [class*="info-"] {
     width: 100vw;
     flex-wrap: wrap;
     gap: 40px;
   }
-  .info-3{
+  .info-3 {
     margin-bottom: 20px;
   }
-  .infocon{
-    width: 200px;height: 200px;font-size: 12px;
+  .infocon {
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
   }
-  .infofa{
+  .infofa {
     display: none !important;
   }
 }

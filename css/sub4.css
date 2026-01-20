@@ -1,6 +1,7 @@
 /* 장바구니 */
 
 .main-cart{
+  width: 1400px;
   width: fit-content;
   display: flex;
   align-self: center;
@@ -9,20 +10,24 @@
   overflow: hidden;
 }
 .drop-items{
+  flex-wrap: wrap;
+  width: 900px;
   display: flex;
+  justify-content: space-around;
   gap: 30px;
+  padding-bottom: 30px;
 }
 .dropCart{
   border-right: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .calcCart{
-  padding: 40px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;

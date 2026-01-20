@@ -22,7 +22,7 @@
           <a href="./newsub2.php">전체상품</a>
           <ul class="drop">
             <li><a href="./newsub2.php">판매상품</a></li>
-            <li><a href="./sub3.php">인기상품</a></li>
+            <li><a href="./newsub3.php">인기상품</a></li>
           </ul>
         </ul>
         <ul>
@@ -81,7 +81,6 @@
       <div class="textLogin">SIGN IN</div>
     </div>
     <script src="./js/lib.js"></script>
-    <script src="./js/sub2.js"></script>
     <script>
       $('.sin').onclick = () => $('.inPop').style.display = 'flex'
       $('.sup').onclick = () => $('.upPop').style.display = 'flex'

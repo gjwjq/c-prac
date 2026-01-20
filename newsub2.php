@@ -41,8 +41,6 @@
     </div>
   </main>
 
-
-
   <main>
     <div class="main-title">ALL PRODUCT</div>
     <div class="main-product">
@@ -64,7 +62,7 @@
           ?>
             <div class="product">
               <div class="pro-img">
-                <img src="<?= $item['img'] ?>" alt="<?= $item['title'] ?>">
+                <img class="big" src="<?= $item['img'] ?>" alt="<?= $item['title'] ?>">
               </div>
               <div class="pro-content">
                 <div class="pro-name"><?= $item['title'] ?></div>

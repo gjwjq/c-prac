@@ -11,7 +11,6 @@
   <link
     rel="stylesheet"
     href="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/공통/fontawesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./css/product.css">
 </head>
 
 <body>
@@ -56,7 +55,7 @@
               <div class="pro-price">가격 : <?= number_format($value['price']) ?>원</div>
               <?php } ?>
               <div class="count" style="font-size: 14px;">
-                <div>수량 : <input type="number" value="<?= $value['count'] ?>" min="1" oninput="calc()" ></div>
+                <div>수량 : <input type="number" value="<?= $value['count'] ?>" min="1" oninput="calc()" onchange="updateDB(this)" data-itemid="<?= $value['idx'] ?>"></div>
                 <div>총 : <span class="sub-total"><?= $realPrice * $value['count'] ?></span>원</div>
               </div>
             </div>
@@ -66,7 +65,7 @@
         </div>
       </div>
       <div class="calcCart">
-        <h1>전체 결제금액 : <span class="disPrice">0</span>원</h1>
+        <h2>전체 결제금액 : <span class="disPrice">0</span>원</h2>
         <button style="cursor: pointer;">구매하기</button>
       </div>
     </div>
@@ -92,5 +91,12 @@
     $('.disPrice').textContent = total.toLocaleString()
   }
   calc()
+
+  function updateDB(input) {
+    const itemId = input.getAttribute('data-itemid')
+    const count = input.value
+
+    fetch(`updatecart.php?itemId=${itemId}&count=${count}`).then(()=>{calc()})
+  }
 </script>
 </html>

@@ -45,7 +45,7 @@
           <div class="mp-title">건강식품</div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/건강식품/1.PNG"
                 alt="건강식품-1"
                 title="건강식품-1"
@@ -66,7 +66,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/건강식품/2.PNG"
                 alt="건강식품-2"
                 title="건강식품-2"
@@ -86,7 +86,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/건강식품/3.PNG"
                 alt="건강식품-3"
                 title="건강식품-3"
@@ -108,7 +108,7 @@
           <div class="mp-title">디지털</div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/디지털/4.PNG"
                 alt="디지털-4"
                 title="디지털-4"
@@ -130,7 +130,7 @@
           </div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/디지털/1.PNG"
                 alt="디지털-1"
                 title="디지털-1"
@@ -150,7 +150,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/디지털/2.PNG"
                 alt="디지털-2"
                 title="디지털-2"
@@ -172,7 +172,7 @@
           <div class="mp-title">팬시</div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/팬시/4.PNG"
                 alt="팬시-4"
                 title="팬시-4"
@@ -192,7 +192,7 @@
           </div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/팬시/1.PNG"
                 alt="팬시-1"
                 title="팬시-1"
@@ -212,7 +212,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/팬시/2.PNG"
                 alt="팬시-2"
                 title="팬시-2"
@@ -236,7 +236,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/향수/4.PNG"
                 alt="향수-4"
                 title="향수-4"
@@ -256,7 +256,7 @@
           </div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/향수/1.PNG"
                 alt="향수-1"
                 title="향수-1"
@@ -277,7 +277,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/향수/2.PNG"
                 alt="향수-2"
                 title="향수-2"
@@ -299,7 +299,7 @@
           <div class="mp-title">헤어케어</div>
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/헤어케어/5.PNG"
                 alt="헤어케어-5"
                 title="헤어케어-5"
@@ -322,7 +322,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/헤어케어/1.PNG"
                 alt="헤어케어-1"
                 title="헤어케어-1"
@@ -342,7 +342,7 @@
 
           <div class="product">
             <div class="pro-img">
-              <img
+              <img class="big"
                 src="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/A-Module/images/헤어케어/2.PNG"
                 alt="헤어케어-2"
                 title="헤어케어-2"

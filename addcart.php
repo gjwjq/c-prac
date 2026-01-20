@@ -12,8 +12,7 @@
         } else {
             DB::exec("insert into cart(userId, itemId) values ('$userId', '$itemId')");
         }
-        alert('장바구니에 추가됨');
-        move('newsub2.php');
+        back('장바구니에 추가됨');
     } else {
         back('로그인 해주세요.');
     }
