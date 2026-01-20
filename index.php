@@ -1,3 +1,8 @@
+<?php 
+require_once 'db.php';
+$notice = DB::fetchAll("select * from notice");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -367,48 +372,30 @@
     <!-- 공지사항 -->
     <main>
       <div class="main-title">NOTICE</div>
-      <a href=""></a>
-      <table>
-        <thead>
-          <tr>
-            <th>유형</th>
-            <th>제목</th>
-            <th>공지일자</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>이벤트</td>
-            <td>24년 7월 &lt;헬스+출석체크인> 이벤트 당첨자 공지</td>
-            <td>2024.08.08</td>
-          </tr>
-          <tr>
-            <td>이벤트</td>
-            <td>7월 [기프트몰TV 보러갈래?] 이벤트 당첨자 발표</td>
-            <td>2024.08.07</td>
-          </tr>
-          <tr>
-            <td>일반</td>
-            <td>[배송안내] 8/14(수)~8/15(목) 택배사 휴무 관련</td>
-            <td>2024.08.06</td>
-          </tr>
-          <tr>
-            <td>일반</td>
-            <td>하월곡점 폐점으로 인한 영업종료 안내</td>
-            <td>2024.07.31</td>
-          </tr>
-          <tr>
-            <td>일반</td>
-            <td>양평점 리로케이션으로 인한 영업 중단 안내</td>
-            <td>2024.07.31</td>
-          </tr>
-          <tr>
-            <td>이벤트</td>
-            <td>[기프트몰라이브 - 기프트몰마켓]이벤트 당첨자 발표</td>
-            <td>2024.07.30</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="tableBtnWrap">
+        <a href="Asc.php">Asc</a>
+        <a href="Desc.php">Desc</a>
+      </div>
+      <div class="table">
+          <ul class="notiHeader">
+            <li style="width: 200px;">유형</li>
+            <li style="width: 1000px;">제목</li>
+            <li style="width: 200px;">공지일자</li>
+          </ul>
+        <ul class="notiSlide">
+        <li>
+          <div class="slideWrap">
+          <?php foreach ($notice as $value) { ?> 
+         <ul idx="<?= $value['idx'] ?>" type="<?= $value['type'] ?>">
+            <span style="width: 200px;"><?= $value['type'] ?></span>
+            <span style="width: 1000px;"><?= $value['des'] ?></span>
+            <span style="width: 200px;"><?= $value['date'] ?></span>
+         </ul>
+         <?php } ?>
+         </div>
+        </li>
+        </ul>
+        </div>
       <div
         class="table-move"
         style="
@@ -418,9 +405,9 @@
           align-items: center;
         "
       >
-        <i class="fa fa-3x fa-arrow-left" style="cursor: pointer"></i>
-        <span style="text-align: center">1/6</span>
-        <i class="fa fa-3x fa-arrow-right" style="cursor: pointer"></i>
+        <i class="fa fa-3x fa-arrow-left leftNum" style="cursor: pointer"></i>
+        <span style="text-align: center"><span class="tableNum">1</span>/5</span>
+        <i class="fa fa-3x fa-arrow-right rightNum" style="cursor: pointer"></i>
       </div>
     </main>
     <!-- 상품입점/제휴문의 -->
@@ -499,4 +486,5 @@
     <!-- 푸터 -->
   <?php require_once "footer.php" ?>
   </body>
+  <script src="./js/index.js"></script>
 </html>

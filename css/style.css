@@ -149,6 +149,7 @@ td {
   padding: 10px 20px;
   text-align: center;
 }
+
 tr th:nth-child(1) {
   width: 200px;
 }
@@ -158,6 +159,8 @@ tr th:nth-child(2) {
 tr th:nth-child(3) {
   width: 200px;
 }
+
+
 
 /* 상품입점/제휴문의 */
 
@@ -235,4 +238,31 @@ tr th:nth-child(3) {
   justify-content: center;
   gap: calc(500px / 3);
   align-items: center;
+}
+
+
+/* 새로운 공지사항 */
+.notiHeader{
+  display: flex;
+  background-color: #ffd400;
+  &>li{
+    display: flex;justify-content: center;
+    align-items: center;
+  height: 50px;
+  }
+}
+
+.notiSlide>li>.slideWrap>ul{
+  display: flex;
+}
+.notiSlide>li>.slideWrap>ul>span{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notiSlide>li{
+  height: 300px;
+  overflow: hidden;
 }
