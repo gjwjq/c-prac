@@ -153,9 +153,9 @@ main{
   height: 100%;
   cursor: pointer;
   transition: .3s;
-  &:hover{
+  /* &:hover{
     transform: scale(1.2);
-  }
+  } */
 }
 
 .pro-content{

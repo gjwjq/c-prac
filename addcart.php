@@ -1,8 +1,9 @@
 <?php 
     require_once 'db.php';
     require_once 'lib.php';
+    session_start();
 
-    $userId = $_SESSION['user']->id ?? false;
+    $userId = $_SESSION['user']['id'] ?? false;
     $itemId = $_GET['idx'];
 
     if ($userId) {
@@ -12,6 +13,7 @@
             DB::exec("insert into cart(userId, itemId) values ('$userId', '$itemId')");
         }
         alert('장바구니에 추가됨');
+        move('newsub2.php');
     } else {
         back('로그인 해주세요.');
     }
