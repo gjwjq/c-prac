@@ -1,6 +1,6 @@
 <?php
     require_once 'db.php';
-DB::exec("TRUNCATE TABLE item");
+    DB::exec("TRUNCATE TABLE item");
     $item = file_get_contents('./data/data2.json');
     $json = json_decode($item);
 

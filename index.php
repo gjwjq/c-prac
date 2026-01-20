@@ -367,6 +367,7 @@
     <!-- 공지사항 -->
     <main>
       <div class="main-title">NOTICE</div>
+      <a href=""></a>
       <table>
         <thead>
           <tr>
