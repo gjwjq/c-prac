@@ -1,6 +1,5 @@
 {//축약 변수
-const $ = e => document.querySelector(e)
-const $$ = e => [...document.querySelectorAll(e)]
+
 
 //비디오
 
@@ -202,3 +201,4 @@ category.forEach(e => {
 dragAndDrop()
 cart()
 }
+

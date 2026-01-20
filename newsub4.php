@@ -4,14 +4,15 @@ if(!isset($_SESSION)) {
   session_start();
 }
 
-$userId = $_SESSION['user']->id ?? false;
+$userId = $_SESSION['user']['id'] ?? false;
 
 if(!$userId) {
   back('로그인 해주세요');
   exit;
 }
 
-$sql = "select c.idx as cart"
+$items = DB::fetchAll("select i.*, c.count from item i join cart c on i.idx = itemId and c.userId = '$userId'");
+
 ?>
 
 

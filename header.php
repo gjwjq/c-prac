@@ -33,7 +33,7 @@
           </ul>
         </ul>
         <ul>
-          <a href="./sub4.php">장바구니</a>
+          <a href="./newsub4.php">장바구니</a>
           <ul class="drop">
             <li><a href="#">-</a></li>
             <li><a href="#">-</a></li>
@@ -80,6 +80,7 @@
       </form> 
       <div class="textLogin">SIGN IN</div>
     </div>
+    <script src="./js/lib.js"></script>
     <script src="./js/sub2.js"></script>
     <script>
       $('.sin').onclick = () => $('.inPop').style.display = 'flex'
