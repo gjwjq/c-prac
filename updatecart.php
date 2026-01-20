@@ -7,4 +7,6 @@
     $itemId = $_GET['itemId'];
     $count = $_GET['count'];
 
-    DB::exec("update cart set count = ? where itemId = ? and userId = ?", [$count,$itemId,$userId]);
+    $sql = "UPDATE cart SET count = '$count' WHERE itemId = '$itemId' AND userId = '$userId'";
+    
+    DB::exec($sql);
