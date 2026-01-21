@@ -105,4 +105,6 @@ async function calc() {
 }
 
 function calc() {
+  let total = 0
+  
 }
