@@ -373,8 +373,14 @@ $notice = DB::fetchAll("select * from notice");
     <main>
       <div class="main-title">NOTICE</div>
       <div class="tableBtnWrap">
-        <a href="Asc.php">Asc</a>
-        <a href="Desc.php">Desc</a>
+      <select onchange="nowFilter = this.value; draw();">
+    <option value="all">전체</option>
+    <option value="일반">일반</option>
+    <option value="이벤트">이벤트</option>
+</select>
+
+<button onclick="isAsc = true; draw();">오름차순</button>
+<button onclick="isAsc = false; draw();">내림차순</button>
       </div>
       <div class="table">
           <ul class="notiHeader">
@@ -386,7 +392,7 @@ $notice = DB::fetchAll("select * from notice");
         <li>
           <div class="slideWrap">
           <?php foreach ($notice as $value) { ?> 
-         <ul idx="<?= $value['idx'] ?>" type="<?= $value['type'] ?>">
+         <ul idx="<?= $value['idx'] ?>" type="<?= $value['type'] ?>" date="<?= $value['date'] ?>">
             <span style="width: 200px;"><?= $value['type'] ?></span>
             <span style="width: 1000px;"><?= $value['des'] ?></span>
             <span style="width: 200px;"><?= $value['date'] ?></span>
