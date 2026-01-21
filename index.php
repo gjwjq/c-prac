@@ -409,10 +409,9 @@ $notice = DB::fetchAll("select * from notice");
           display: flex;
           gap: 50px;
           align-items: center;
-        "
-      >
+        ">
         <i class="fa fa-3x fa-arrow-left leftNum" style="cursor: pointer"></i>
-        <span style="text-align: center"><span class="tableNum">1</span>/5</span>
+        <span style="text-align: center"><span class="tableNum">1</span>/<span class="allTableNum">5</span> </span>
         <i class="fa fa-3x fa-arrow-right rightNum" style="cursor: pointer"></i>
       </div>
     </main>
