@@ -191,7 +191,7 @@ main {
   font-size: 32px;
   position: relative;
   cursor: pointer;
-
+user-select: none;
   &:hover::after {
     width: 120%;
   }

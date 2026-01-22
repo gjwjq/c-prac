@@ -98,5 +98,5 @@
 
     fetch(`updatecart.php?itemId=${itemId}&count=${count}`).then(()=>{calc()})
   }
-</script>
+</script>                                                 
 </html>
