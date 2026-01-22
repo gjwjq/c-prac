@@ -238,11 +238,7 @@ user-select: none;
   color: white;
   transition: 0.3s;
   font-size: 14px;
-  &:hover {
-    background-color: white;
-    border: 2px solid #ffc400;
-    color: #ffc400;
-  }
+
 }
 .btn-wrap button {
   width: 48%;
@@ -259,30 +255,26 @@ user-select: none;
   font-size: 12px;
   transition: 0.3s;
   font-size: 14px;
-  &:hover{
-background-color: #ffc400;
-  color: white;
-  }
+
 }
 .pro-wrap {
   display: flex;
   justify-content: space-between;
 }
 /* 푸터 */
-
-footer {
+/* footer{
+  box-shadow: 0 0 3px #333;  
+}
+.ftwrap {
   padding: 30px;
   justify-self: center;
   max-width: 1400px;
   width: 100%;
   height: auto;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  margin-bottom: 50px;
-  box-shadow: 0 0 50px #ccc;
   font-weight: bold;
   text-align: justify;
 }
@@ -354,8 +346,176 @@ footer .fa:nth-child(4):hover {
 }
 footer .fa:nth-child(5):hover {
   color: blue;
+} */
+
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer img{
+  filter: grayscale(1);
 }
 
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f9fafb;
+}
+
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 3rem 1.5rem;
+}
+
+.container {
+  max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-area {
+  border-radius: 50%;
+  background-color: #ffffff5b;
+  width: 140px;height: 140px;
+  overflow: hidden;display: flex;justify-content: center;align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* 고객센터 섹션 */
+.cs-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+}
+
+.cs-item, .cs-time, .cs-notice {
+    flex: 1;
+    min-width: 250px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.cs-title {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+}
+
+.cs-time, .cs-notice {
+    display: flex;
+    align-items: flex-end; /* 아래쪽 정렬 맞춤 */
+}
+
+/* 링크 및 SNS */
+.link-sns-area {
+    margin-bottom: 2.5rem;
+}
+
+.policy-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.policy-links a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.policy-links a:hover {
+    color: #ffffff;
+}
+
+.policy-links .highlight {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.divider {
+    color: #374151;
+}
+
+.sns-icons {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.sns-icons a {
+    font-size: 1.5rem;
+    color: #94a3b8;
+    transition: color 0.2s;
+}
+
+.sns-icons a:hover {
+    color: #ffffff;
+}
+
+/* 기업정보 및 보증박스 */
+.info-guarantee-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.company-info {
+    flex: 2;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    color: #64748b;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.guarantee-box {
+    flex: 1;
+    background-color: #1e293b;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(55, 65, 81, 0.5);
+}
+
+.guarantee-title {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.guarantee-text {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.guarantee-link {
+    color: #60a5fa;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.guarantee-link:hover {
+    color: #93c5fd;
+}
 /* 모달 */
 .upPop,
 .inPop {

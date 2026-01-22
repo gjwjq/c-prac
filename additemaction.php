@@ -5,10 +5,9 @@
 
     $title = $_POST['title'];
     $des = $_POST['des'];
-    $idx = $_POST['idx'];
     $cate = $_POST['cate'];
     $price = $_POST['price'];
-    $file = $_FILES['file'];
+    $file = $_FILES['img'];
     $path = "images/item";
     $desPath = $path . "/" . $file['name'];
 
